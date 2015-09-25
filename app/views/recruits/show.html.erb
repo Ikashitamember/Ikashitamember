@@ -30,6 +30,7 @@
 <% end %>
 <%= link_to 'Back', recruits_path %>
 
+<% if @recruit.user_id == current_user.id %>
 <div class="span8">
     <% if @recruit.applies.any? %>
       <h3>Applies (<%= @recruit.applies.count %>)</h3>
@@ -40,3 +41,4 @@
     <% end %>
   </div>
 </div>
+<% end %>
